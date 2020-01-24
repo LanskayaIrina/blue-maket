@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      header {
+        border: 1px solid blue;
+        background: burlywood;
+        min-height: 100px;
+        margin-bottom: 10px;
+        width: 100%;
+      }
+      article:after{
+        content:'';
+        display: table;
+        clear: both;
+      }
+      article{
+        width:68%;
+        float:left;
+      }
+      .column1 {
+        border: 1px solid blue;
+        background: burlywood;
+        min-height: 500px;
+        width: 48%;
+        float: left;
+      }
+      .column2 {
+        border: 1px solid blue;
+        background: burlywood;
+        min-height: 500px;
+        margin: 0 2%;
+        width: 48%;
+        float: right;
+      }
+      .column3 {
+        border: 1px solid blue;
+        background: burlywood;
+        min-height: 500px;
+        width: 32%;
+        float: right;
+      }
+      footer {
+        width: 100%;
+        border: 1px solid blue;
+        background: burlywood;
+        min-height: 100px;
+        margin-top: 10px;
+      }
+      main {
+      
+      }
+      main:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      @media all and (max-width: 768px) {
+        .column3 {
+          display: none;
+        }
+        .column1,
+        .column2 {
+          width: 49%;
+        }
+        .column2 {
+          margin-right: 0;
+          float: right;
+        }
+        article{
+          width:100%;
+          float:none;
+        }
+      }
+      @media all and (max-width: 600px) {
+        .column1,
+        .column2,
+        .column3 {
+          float: none;
+          width: 100%;
+          margin: 1em 0;
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>header</header>
+    <main>
+      <article>
+        <section class="column2">column2</section>
+        <section class="column1">column1</section>
+      </article>
+      <section class="column3">column3</section>
+    </main>
+    <footer>footer</footer>
+  </body>
+</html>
